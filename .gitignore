@@ -16,6 +16,9 @@ build/
 .env.test.local
 .env.production.local
 
+# Railway
+.railway/
+
 # Logs
 logs/
 *.log

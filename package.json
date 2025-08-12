@@ -8,7 +8,8 @@
         "start": "node dist/index.js",
         "dev": "ts-node src/index.ts",
         "watch": "tsc --watch",
-        "deploy-commands": "node deploy-commands.js"
+        "deploy-commands": "node deploy-commands.js",
+        "postinstall": "npm run build"
     },
     "keywords": ["discord", "bot", "dune", "chest", "respawn"],
     "author": "",
