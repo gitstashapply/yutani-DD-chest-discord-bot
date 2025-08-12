@@ -45,6 +45,30 @@ let bot: DiscordBot;
 async function startBot(): Promise<void> {
     try {
         console.log("🤖 Starting Discord bot...");
+
+        // Debug: Log environment variables (without sensitive data)
+        console.log("🔍 Environment variables check:");
+        console.log(
+            "  - DISCORD_TOKEN:",
+            process.env.DISCORD_TOKEN ? "✅ Set" : "❌ Missing",
+        );
+        console.log(
+            "  - DISCORD_CLIENT_ID:",
+            process.env.DISCORD_CLIENT_ID ? "✅ Set" : "❌ Missing",
+        );
+        console.log(
+            "  - GUILD_ID:",
+            process.env.GUILD_ID ? "✅ Set" : "❌ Missing",
+        );
+        console.log(
+            "  - CHEST_RESPAWN_TIME:",
+            process.env.CHEST_RESPAWN_TIME ? "✅ Set" : "❌ Missing",
+        );
+        console.log(
+            "  - NOTIFICATION_TIME:",
+            process.env.NOTIFICATION_TIME ? "✅ Set" : "❌ Missing",
+        );
+
         bot = new DiscordBot();
         await bot.start();
         console.log("✅ Discord bot started successfully");
